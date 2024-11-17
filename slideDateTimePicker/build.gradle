@@ -2,12 +2,13 @@ apply plugin: 'com.android.library'
 
 android {
     namespace "com.github.jjobes.slidedatetimepicker"
-    compileSdkVersion 34
-    buildToolsVersion "34.0.0"
+//    compileSdkVersion 34
+//    buildToolsVersion "34.0.0"
 
     defaultConfig {
         minSdkVersion 24
         targetSdkVersion 33
+        compileSdk 34
     }
 
     buildTypes {
@@ -20,4 +21,10 @@ android {
 
 dependencies {
     implementation 'androidx.legacy:legacy-support-v13:1.0.0'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
 }
